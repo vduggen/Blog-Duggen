@@ -80,7 +80,7 @@ export const Container = styled.aside`
 		display: flex;
 		flex-direction: column;
 
-		a {
+		.link {
 			color: var(--light-color);
 			margin: 0.5rem 0;
 			text-decoration: none;
@@ -104,7 +104,7 @@ export const Container = styled.aside`
 			opacity: 0.5;
 		}
 
-		button {
+		.btn-callme {
 			margin-top: 1rem;
 
 			a {
@@ -114,12 +114,76 @@ export const Container = styled.aside`
 		}
 	}
 
+	@media (min-width: 300px) {
+		position: fixed;
+		left: 0;
+
+		width: 0;
+		padding: 0;
+		height: 100vh;
+
+		h2 {
+			margin-top: 2rem;
+		}
+
+		img {
+			height: 200px;
+		}
+
+		nav {
+			.link {
+				font-size: 1.3rem;
+				margin: 1rem 0;
+
+				svg {
+					font-size: 1.5rem;
+				}
+			}
+
+			.btn-callme {
+				margin-top: 1.3rem;
+				width: 180px;
+				height: 50px;
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		position: relative;
+		height: auto;
+
+		padding: 1rem;
+		width: 25%;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 1rem 2rem;
+	}
+
+	@media (min-width: 2000px) {
+		padding: 1rem 3rem;
+		width: 15%;
+	}
+
 	${(props: PropsContainer) =>
 		props.close &&
 		css`
-			padding: 0 0;
-			width: 0;
-			transform: translateX(-100%);
-			width: 0%;
+			@media (min-width: 300px) {
+				width: 260px;
+				padding: 1rem 1rem;
+				z-index: 999;
+			}
+
+			@media (min-width: 450px) {
+				width: 309px;
+				padding: 1rem 1rem;
+			}
+
+			@media (min-width: 992px) {
+				padding: 0 0;
+				transform: translateX(-100%);
+				width: 0%;
+				z-index: 1;
+			}
 		`}
 `;

@@ -30,12 +30,7 @@ const Sidebar = () => {
 
 			<h2>Blog Duggen</h2>
 
-			<Image
-				src="/assets/Perfil1.jpg"
-				alt="Picture of the author"
-				width={200}
-				height={200}
-			/>
+			<img src="/assets/Perfil1.jpg" alt="Picture of the author" />
 
 			<h4>Front-end Developer</h4>
 
@@ -69,13 +64,13 @@ const Sidebar = () => {
 
 			<nav>
 				<Link href="/">
-					<a className={router.asPath === "/" ? "active" : ""}>
+					<a className={`${router.asPath === "/" ? "active" : ""} link`}>
 						<AiFillHome />
 						Inicio
 					</a>
 				</Link>
 				<Link href="/blog">
-					<a className={router.asPath === "/blog" ? "active" : ""}>
+					<a className={`${router.asPath === "/blog" ? "active" : ""} link`}>
 						<AiFillRead />
 						Blog
 					</a>
@@ -89,6 +84,7 @@ const Sidebar = () => {
 					width={160}
 					height={45}
 					primary
+					className="btn-callme"
 				>
 					<RiSendPlaneFill />
 					Falar Comigo

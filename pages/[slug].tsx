@@ -14,9 +14,10 @@ const Slug = ({ content, data }) => {
 
 				<header>
 					<T.Paragraph fontSize="1rem" color="var(--muted-color)">
-						{frontmatter.date}
+						<span>{frontmatter.category} - </span>
+						<span>{frontmatter.date}</span>
 					</T.Paragraph>
-					<T.H1 fontSize="2.3rem" color="var(--light-color)">
+					<T.H1 fontSize="2.5rem" color="var(--light-color)">
 						{frontmatter.title}
 					</T.H1>
 				</header>

@@ -27,6 +27,7 @@ function Blog(props: PropsBlog) {
 								description={blog.description}
 								banner={blog.banner}
 								date={blog.date}
+								category={blog.category}
 							/>
 						</a>
 					</Link>

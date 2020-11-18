@@ -21,7 +21,7 @@ export default function Home(props: PropsHome) {
 
 	return (
 		<Layout title="Inicio">
-			<S.Container>
+			<S.Container center={ListItems.length === 1 && true}>
 				<header>
 					<section className="column-left">
 						<T.H1 fontSize="2.5rem" color="var(--primary-color)">
@@ -31,11 +31,11 @@ export default function Home(props: PropsHome) {
 							Front-end Developer
 						</T.H5>
 						<T.Paragraph fontSize="1rem" color="var(--muted-color)">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-							odit labore excepturi provident perferendis vel, quod amet in
-							delectus, aliquid commodi nemo quae fugit autem unde cumque!
-							Optio, enim exercitationem quaerat, quasi, explicabo deserunt modi
-							veniam aspernatur eius at assumenda.
+							Entusiasta de tecnologia e atualmente estudante autoditada
+							sobre desenvolvimento web focado em front-end, gosto muito
+							de compartilhar meus conhecimentos e ajudar outras pessoas.
+							Quer saber mais sobre minha vida profissional? Baixe meu 
+							curriculum! &darr;
 						</T.Paragraph>
 
 						<Button
@@ -63,20 +63,23 @@ export default function Home(props: PropsHome) {
 
 				<Divider width={85} />
 
-				{ListItems.map((blog, i) =>
-					i !== 5 ? (
-						<Link key={i} href={`/${blog.slug}`}>
-							<a className="post">
-								<ListPost
-									title={blog.title}
-									description={blog.description}
-									banner={blog.banner}
-									date={blog.date}
-								/>
-							</a>
-						</Link>
-					) : null
-				)}
+				<section className="container-posts">
+					{ListItems.map((blog, i) =>
+						i <= 6 ? (
+							<Link key={i} href={`/${blog.slug}`}>
+								<a className="post">
+									<ListPost
+										title={blog.title}
+										description={blog.description}
+										banner={blog.banner}
+										date={blog.date}
+										category={blog.category}
+									/>
+								</a>
+							</Link>
+						) : null
+					)}
+				</section>
 			</S.Container>
 		</Layout>
 	);

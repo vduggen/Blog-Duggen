@@ -15,6 +15,8 @@ export const Banner = styled.div`
 `;
 
 export const Container = styled.article`
+	margin-top: 1rem;
+
 	header {
 		display: flex;
 		align-items: center;
@@ -24,6 +26,7 @@ export const Container = styled.article`
 
 		p {
 			margin: 1rem 0;
+			text-transform: uppercase;
 		}
 	}
 
@@ -36,9 +39,13 @@ export const Container = styled.article`
 	}
 
 	.post {
+		h2 {
+			font: 500 2rem "Roboto",sans-serif;
+		}
+
 		p {
 			font: 400 1rem "Open Sans", sans-serif;
-			margin: 2rem 0;
+			margin: 1.5rem 0;
 			line-height: 1.5;
 			color: var(--light-color);
 		}

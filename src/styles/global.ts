@@ -8,9 +8,10 @@ const GlobalStyle = createGlobalStyle`
 
     // Color
     --primary-color: #2E8BC0;
+    --secondary-color: #145DA0;
     --light-color: #fff;
     --dark-color: #333;
-    --muted-color: #656565;
+    --muted-color: #858585;
     --row-color: #cccccc30;
 
     // Buttons
@@ -22,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
 
   .post {
     text-decoration: none;
+  }
+
+  body {
+    background: var(--dark-color);
   }
 `;
 
