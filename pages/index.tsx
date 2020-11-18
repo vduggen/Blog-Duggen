@@ -21,7 +21,7 @@ export default function Home(props: PropsHome) {
 
 	return (
 		<Layout title="Inicio">
-			<S.Container center={ListItems.length === 1 && true}>
+			<S.Container>
 				<header>
 					<section className="column-left">
 						<T.H1 fontSize="2.5rem" color="var(--primary-color)">
