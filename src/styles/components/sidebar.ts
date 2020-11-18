@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface PropsContainer {
-	open: boolean;
+	close: boolean;
 }
 
 export const Container = styled.aside`
@@ -115,7 +115,7 @@ export const Container = styled.aside`
 	}
 
 	${(props: PropsContainer) =>
-		props.open &&
+		props.close &&
 		css`
 			padding: 0 0;
 			width: 0;

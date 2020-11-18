@@ -4,13 +4,13 @@ import { useContext } from "react";
 import { SidebarContext } from "../context/sidebarContext";
 
 const Body: React.FC = ({ children }) => {
-	const { sidebarIsOpen, setSidebarIsOpen } = useContext(SidebarContext);
+	const { sidebarIsClose, setSidebarIsClose } = useContext(SidebarContext);
 
 	return (
-		<S.Container open={sidebarIsOpen}>
+		<S.Container close={sidebarIsClose}>
 			<BiMenu
 				className="btn-open-sidebar"
-				onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
+				onClick={() => setSidebarIsClose(!sidebarIsClose)}
 			/>
 			{children}
 		</S.Container>

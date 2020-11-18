@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface PropsContainer {
-	open: boolean;
+	close: boolean;
 }
 
 export const Container = styled.section`
@@ -17,7 +17,7 @@ export const Container = styled.section`
 	}
 
 	${(props: PropsContainer) =>
-		props.open &&
+		props.close &&
 		css`
 			width: 100%;
 		`}

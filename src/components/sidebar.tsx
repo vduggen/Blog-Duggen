@@ -18,14 +18,14 @@ import { useContext } from "react";
 import { SidebarContext } from "../context/sidebarContext";
 
 const Sidebar = () => {
-	const { sidebarIsOpen, setSidebarIsOpen } = useContext(SidebarContext);
+	const { sidebarIsClose, setSidebarIsClose } = useContext(SidebarContext);
 	const router = useRouter();
 
 	return (
-		<S.Container open={sidebarIsOpen}>
+		<S.Container close={sidebarIsClose}>
 			<IoMdClose
 				className="btn-close-sidebar"
-				onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
+				onClick={() => setSidebarIsClose(!sidebarIsClose)}
 			/>
 
 			<h2>Blog Duggen</h2>
